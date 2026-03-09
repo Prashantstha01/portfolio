@@ -176,25 +176,6 @@ h1, h2, h3, h4, .logo {
     color: var(--text);
 }
 
-/* Hamburger button  */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--text);
-    border-radius: 2px;
-    transition: all 0.3s;
-}
 
 /*  HERO SECTION */
 .hero {
@@ -204,31 +185,6 @@ h1, h2, h3, h4, .logo {
     padding-top: 80px; 
     position: relative;
     overflow: hidden;
-}
-
-
-.bg-circle {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.12;
-    pointer-events: none;
-}
-
-.circle-1 {
-    width: 500px;
-    height: 500px;
-    background: var(--primary);
-    top: -100px;
-    right: -100px;
-}
-
-.circle-2 {
-    width: 400px;
-    height: 400px;
-    background: #818CF8;
-    bottom: -100px;
-    left: -100px;
 }
 
 .hero-container {
@@ -259,25 +215,6 @@ h1, h2, h3, h4, .logo {
 
 .hero-left h1 span {
     color: var(--primary-light);
-}
-
-/* Typing text */
-.typing-wrapper {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--subtext);
-    margin-bottom: 18px;
-    min-height: 36px;
-}
-
-.cursor {
-    animation: blink 0.7s infinite;
-    color: var(--primary);
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0; }
 }
 
 .hero-desc {

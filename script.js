@@ -1,43 +1,3 @@
-// TYPING EFFECT
-const typingElement = document.querySelector(".typing");
-const words = ["UI/UX Designer", "Frontend Developer", "Problem Solver"];
-let wordIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-
-function typeEffect() {
-    const currentWord = words[wordIndex];
-
-    if (!isDeleting) {
-        // Add one character
-        typingElement.textContent = currentWord.substring(0, charIndex + 1);
-        charIndex++;
-
-        if (charIndex === currentWord.length) {
-            
-            isDeleting = true;
-            setTimeout(typeEffect, 1400);
-            return;
-        }
-    } else {
-        // Remove one character
-        typingElement.textContent = currentWord.substring(0, charIndex - 1);
-        charIndex--;
-
-        if (charIndex === 0) {
-            // Word fully deleted —move to next word
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-        }
-    }
-
-    const speed = isDeleting ? 50 : 90;
-    setTimeout(typeEffect, speed);
-}
-
-typeEffect();
-
-
 // NAVBAR
 const sections  = document.querySelectorAll("section");
 const navLinks  = document.querySelectorAll(".nav-link");
@@ -97,22 +57,6 @@ function checkReveal() {
 window.addEventListener("scroll", checkReveal);
 window.addEventListener("load", checkReveal);
 
-
-// HAMBURGER MENU
-  
-const hamburger = document.getElementById("hamburger");
-const navMenu   = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
-});
-
-// Close menu when a link is clicked
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navMenu.classList.remove("open");
-    });
-});
 
 
 // CONTACT FORM

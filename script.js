@@ -1,15 +1,15 @@
-// Simple Form Logic
+// Form Logic
 const myForm = document.getElementById('contactForm');
 const statusMsg = document.getElementById('msgStatus');
 
 myForm.addEventListener('submit', function(event) {
-    event.preventDefault(); // Stop page from refreshing
+    event.preventDefault(); // It Stop page from refreshing
     
     // Get values
     const name = document.getElementById('userName').value;
     const email = document.getElementById('userEmail').value;
     
-    // Simple Email Check
+    //  Email Check
     if (email.includes("@") && email.includes(".")) {
         statusMsg.innerText = "Thanks " + name + ", message sent!";
         statusMsg.style.color = "#818CF8";
